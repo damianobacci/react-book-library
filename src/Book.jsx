@@ -1,7 +1,7 @@
 import styles from "./Book.module.css";
 
 const Book = (props) => {
-  const calculatedWidth = props.width * 0.2;
+  const calculatedWidth = Math.max(45, props.width * 0.13);
   const widthInPixels = calculatedWidth + "px";
 
   return (
