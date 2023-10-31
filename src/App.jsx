@@ -2,8 +2,8 @@ import styles from "./App.module.css";
 import Book from "./Book";
 
 const dummy_books = [
-  { author: "TOLSTOJ", title: "War and Peace", pages: 150 },
-  { author: "TOLSTOJ", title: "War and Peace", pages: 890 },
+  { author: "TOLSTOJ", title: "War and Peace", pages: 250 },
+  { author: "TOLSTOJ", title: "War and Peace", pages: 590 },
   { author: "TOLSTOJ", title: "War and Peace", pages: 223 },
   { author: "TOLSTOJ", title: "War and Peace", pages: 440 },
 ];
@@ -18,6 +18,7 @@ function App() {
         <input type="text" id="author" name="author" />
         <label htmlFor="pages">Pages</label>
         <input type="number" id="pages" name="pages" />
+        <button type="submit">Add Book</button>
       </form>
       <div className={styles.library}>
         {dummy_books.map((book) => (

@@ -1,9 +1,11 @@
 .book {
-  width: 5%;
+  box-sizing: border-box;
+  min-width: fit-content;
+  width: var(--book-width);
   height: 50%;
   border: 2px solid black;
   writing-mode: vertical-rl;
   text-align: center;
-  padding: 0.3em;
+  padding: 0.3em 0;
   text-transform: uppercase;
 }
