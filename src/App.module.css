@@ -1,9 +1,18 @@
 .library {
   width: 50%;
-  height: 300px;
   border: 2px solid black;
   display: flex;
   flex-wrap: wrap;
 }
 
-/* App.module.css */
+.form {
+  width: 30%;
+}
+
+.form input {
+  width: 100%;
+}
+
+.form button {
+  margin: 1em auto;
+}

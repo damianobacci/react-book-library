@@ -29,7 +29,9 @@ function App() {
   };
   return (
     <>
-      <form onSubmit={bookAddHandler}>
+      <h1>React Book Library</h1>
+      <h2>Add a Book</h2>
+      <form className={styles.form} onSubmit={bookAddHandler}>
         <label htmlFor="title">Title</label>
         <input type="text" id="title" name="title" />
         <label htmlFor="author">Author</label>

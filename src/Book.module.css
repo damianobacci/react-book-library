@@ -2,7 +2,7 @@
   box-sizing: border-box;
   min-width: fit-content;
   width: var(--book-width);
-  height: 50%;
+  height: 200px;
   border: 2px solid black;
   writing-mode: vertical-rl;
   text-align: center;
