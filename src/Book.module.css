@@ -1,0 +1,9 @@
+.book {
+  width: 5%;
+  height: 50%;
+  border: 2px solid black;
+  writing-mode: vertical-rl;
+  text-align: center;
+  padding: 0.3em;
+  text-transform: uppercase;
+}

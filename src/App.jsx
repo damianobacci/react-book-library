@@ -1,35 +1,31 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import styles from "./App.module.css";
+import Book from "./Book";
+
+const dummy_books = [
+  { author: "TOLSTOJ", title: "War and Peace", pages: 150 },
+  { author: "TOLSTOJ", title: "War and Peace", pages: 890 },
+  { author: "TOLSTOJ", title: "War and Peace", pages: 223 },
+  { author: "TOLSTOJ", title: "War and Peace", pages: 440 },
+];
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
     <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
+      <form>
+        <label htmlFor="title">Title</label>
+        <input type="text" id="title" name="title" />
+        <label htmlFor="author">Author</label>
+        <input type="text" id="author" name="author" />
+        <label htmlFor="pages">Pages</label>
+        <input type="number" id="pages" name="pages" />
+      </form>
+      <div className={styles.library}>
+        {dummy_books.map((book) => (
+          <Book text={book.author} width={book.pages} />
+        ))}
       </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
     </>
-  )
+  );
 }
 
-export default App
+export default App;
